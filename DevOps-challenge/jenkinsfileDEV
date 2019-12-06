@@ -8,7 +8,7 @@ pipeline {
             steps {
                 git branch: 'master',
                 url: 'https://github.com/Eslam1141/code-challenge.git'
-                echo "env.BRANCH_NAME"
+                echo "$BRANCH_NAME"
             }
         }
         
