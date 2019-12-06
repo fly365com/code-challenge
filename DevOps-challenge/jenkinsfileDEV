@@ -16,7 +16,6 @@ pipeline {
             when { equals expected: 'master', actual: 'master' }		 
             steps {
                 echo 'Clean ... Build'
-
             }
 
         }
@@ -24,7 +23,7 @@ pipeline {
         stage('Unit Test') {
             when { equals expected: 'release', actual: 'release' }		 
             steps {
-                echo 'Testing..'
+                echo 'Testing...'
                 
 		          
             }
