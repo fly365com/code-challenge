@@ -1,0 +1,41 @@
+pipeline {
+
+    agent any
+
+    stages {
+        
+        stage('SCM') {
+            steps {
+                git branch: 'master',
+                url: 'https://github.com/Eslam1141/code-challenge.git'
+                echo "$BRANCH_NAME"
+            }
+        }
+        
+        stage('Build') {
+            when { equals expected: 'master', actual: 'master' }		 
+            steps {
+                echo 'Clean ... Build'
+            }
+
+        }
+
+        stage('Unit Test') {
+            when { equals expected: 'release', actual: 'release' }		 
+            steps {
+                echo 'Testing...'
+                
+		          
+            }
+        }
+
+        stage('Deploy') {
+            when { equals expected: 'master', actual: 'master' }		 
+
+            steps {
+                echo 'Deploying....'
+
+        }
+      }
+    }
+}
