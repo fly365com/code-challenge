@@ -8,6 +8,9 @@ commit to the pupblic repo `https://github.com/Eslam1141/code-challenge.git`
 on branch `dev` or `master`
 ## thier are two ways to have DEV and PROD Enviroment
 
+- installed jenkins as linux service not as docker cause to connect docker to call docker to build will need 2 ways 
+  1 - DND ( Docker in Docker ) to use docker service API inside docker container ( time limited )
+  2 - to use the docker API socket with the docker for the container to act as one socket ( time limited )
 - to deploy in other Cluster ( limited resourses )
 - to deploy in diffrent namespace but that not the best thing ( limited resourses )
 
