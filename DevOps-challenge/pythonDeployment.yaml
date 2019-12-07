@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: python:3.7-alpine
+        image: eslam14/fly365:PythonApp-TAG
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
