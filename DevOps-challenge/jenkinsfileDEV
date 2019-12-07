@@ -33,7 +33,7 @@ pipeline {
             when { equals expected: 'master', actual: 'master' }		 
 
             steps {
-                echo 'Deploying....'
+                echo 'Deploying...'
 
         }
       }
